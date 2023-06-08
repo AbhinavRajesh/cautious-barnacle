@@ -32,9 +32,9 @@ const Settings = () => {
       container={true}
       className="bg-[#F5F5F5]"
     >
-      <section className="lg:overflow-hidden flex items-start gap-[60px] lg:h-screen pb-[140px] lg:pb-0 bg-[#F5F5F5]">
+      <section className="lg:overflow-hidden flex items-start gap-[60px] h-screen pb-[140px] lg:pb-0 bg-[#F5F5F5]">
         <DashboardSidebar />
-        <div className="lg:pb-[60px] lg:max-h-screen lg:overflow-scroll no-scrollbar px-[16px] md:px-[32px] lg:px-[0px] w-full max-w-[1000px] pt-[60px] lg:pr-[60px]">
+        <div className="lg:pb-[60px] lg:overflow-scroll no-scrollbar px-[16px] md:px-[32px] lg:px-[0px] w-full max-w-[1000px] pt-[60px] lg:pr-[60px]">
           <DashboardHeader title="Settings" />
           <div className="pt-[60px]">
             <button

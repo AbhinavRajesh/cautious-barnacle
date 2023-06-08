@@ -32,13 +32,15 @@ const Users = () => {
       container={true}
       className="bg-[#F5F5F5]"
     >
-      <section className="lg:overflow-hidden flex items-start gap-[60px] lg:h-screen pb-[140px] lg:pb-0 bg-[#F5F5F5]">
+      <section className="lg:overflow-hidden flex items-start gap-[60px] h-screen pb-[140px] lg:pb-0 bg-[#F5F5F5]">
         <DashboardSidebar />
-        <div className="lg:pb-[60px] lg:max-h-screen lg:overflow-scroll no-scrollbar px-[16px] md:px-[32px] lg:px-[0px] w-full max-w-[1000px] pt-[60px] lg:pr-[60px]">
+        <div className="lg:pb-[60px] lg:overflow-scroll no-scrollbar px-[16px] md:px-[32px] lg:px-[0px] w-full max-w-[1000px] pt-[60px] lg:pr-[60px]">
           <DashboardHeader title="Users" />
           <div className="pt-[60px]">
-            <h1 className="text-[48px] font-bold">Oops! You caught us!</h1>
-            <p className="text-[18px] font-lato mt-[8px] text-[#858585]">
+            <h1 className="leading-[32px] text-[28px] md:text-[48px] md:leading-[52px] font-bold">
+              Oops! You caught us!
+            </h1>
+            <p className="text-[14px] md:text-[18px] font-lato mt-[8px] text-[#858585]">
               We are still working on this page, check back later!
             </p>
           </div>
