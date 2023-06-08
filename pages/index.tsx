@@ -47,7 +47,7 @@ export default function Home() {
                 width={11}
                 buttonText="Sign in with Apple"
                 key="Apple Auth"
-                onClick={() => console.log("Apple authentication is TODO")}
+                onClick={() => alert("Apple authentication is TODO")}
               />
             </div>
             <form className="bg-white rounded-[20px] p-[30px] w-full flex flex-col">

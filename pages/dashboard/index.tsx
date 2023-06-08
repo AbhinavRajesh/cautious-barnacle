@@ -95,7 +95,6 @@ const Dashboard = () => {
   const handleFetchStats = async () => {
     if (fetching || !session) return;
     setFetching(true);
-    console.log("Fetching...");
     try {
       const response = await axios.get("/api/v1/dashboard");
       setData(response.data?.data);
