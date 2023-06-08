@@ -2,7 +2,7 @@ interface IStatsCard {
   cardColor: string;
   iconUrl: string;
   title: string;
-  value?: string;
+  value?: React.ReactNode;
 }
 
 const StatsCard = ({ cardColor, iconUrl, title, value }: IStatsCard) => {

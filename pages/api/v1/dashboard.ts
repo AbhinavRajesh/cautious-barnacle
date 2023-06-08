@@ -3,10 +3,10 @@ import type { NextApiRequest, NextApiResponse } from "next";
 type Data = {
   success: boolean;
   data: {
-    totalRevenues: string;
-    totalTransactions: string;
-    totalLikes: string;
-    totalUsers: string;
+    totalRevenues: number;
+    totalTransactions: number;
+    totalLikes: number;
+    totalUsers: number;
   };
 };
 
@@ -16,13 +16,10 @@ export default function handler(
 ) {
   // Dummy data
   const dummyData = {
-    totalRevenues:
-      "$" + Math.round(Math.random() * 1000000).toLocaleString("en-US"),
-    totalTransactions: Math.round(Math.random() * 10000).toLocaleString(
-      "en-US"
-    ),
-    totalLikes: Math.round(Math.random() * 10000).toLocaleString("en-US"),
-    totalUsers: Math.round(Math.random() * 1000).toLocaleString("en-US"),
+    totalRevenues: Math.round(Math.random() * 1000000),
+    totalTransactions: Math.round(Math.random() * 10000),
+    totalLikes: Math.round(Math.random() * 10000),
+    totalUsers: Math.round(Math.random() * 1000),
   };
 
   res.status(200).json({

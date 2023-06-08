@@ -1,7 +1,19 @@
+import { signIn, useSession } from "next-auth/react";
+
 import OAuthButton from "@/components/Button/OAuthButton";
 import DefaultLayout from "@/layouts/Default";
+import { useRouter } from "next/router";
+import Loader from "@/components/Loader";
 
 export default function Home() {
+  const router = useRouter();
+  const { data: session } = useSession();
+
+  if (session) {
+    router.push("/dashboard");
+    return <Loader title="Redirecting to dashboard" />;
+  }
+
   return (
     <DefaultLayout
       title="Sign up | OpeninApp"
@@ -26,6 +38,7 @@ export default function Home() {
                 width={14}
                 buttonText="Sign in with Google"
                 key="Google Auth"
+                onClick={() => signIn()}
               />
               <OAuthButton
                 logoUrl="/assets/icons/apple.svg"
@@ -34,6 +47,7 @@ export default function Home() {
                 width={11}
                 buttonText="Sign in with Apple"
                 key="Apple Auth"
+                onClick={() => console.log("Apple authentication is TODO")}
               />
             </div>
             <form className="bg-white rounded-[20px] p-[30px] w-full flex flex-col">
